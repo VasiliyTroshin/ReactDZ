@@ -3,11 +3,61 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+
+import {
+  ThemeProvider,
+  useTheme,
+  createTheme,MuiThemeProvider
+ } from "@material-ui/core/styles";
+ 
+ import { createStyles, makeStyles } from '@material-ui/core';
+
+ const useGlobalStyles = makeStyles(() =>
+   createStyles({
+     '@global': {
+       html: {
+         '-webkit-font-smoothing': 'antialiased',
+         height: '100%',
+         width: '100%'
+       },
+       body: {
+         height: '100%',
+         width: '100%'
+       },
+       '#root': {
+         height: '100%',
+         width: '100%'
+       }
+     }
+   })
+ );
+ 
+
+ const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#03a9f4",
+      
+    },
+    secondary: {
+      main: "#0098FF",
+      
+    },
+  },
+ });
+ 
+ const GlobalStyles = () => { useGlobalStyles(); return null; };
+
 
 ReactDOM.render(
-  <React.StrictMode>
+  <MuiThemeProvider theme={theme}>
+    <BrowserRouter>
+    
+    </BrowserRouter>
+    <GlobalStyles />
     <App />
-  </React.StrictMode>,
+  </MuiThemeProvider>,
   document.getElementById('root')
 );
 

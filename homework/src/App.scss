@@ -1,24 +1,50 @@
 .App {
   text-align: center;
   display: flex;
-  align-items: center;
+  // align-items: center;
   justify-content: center;
-  width: 300px;
+  width: 800px;
   min-height: 300px;
   padding: 0 40px;
+  // flex-direction: column;
+
+
+}
+
+.list{
+  display: flex;
+  margin: 30px;
+ background-color: #8e9394;
+ height: 150px;
+ padding: 10px;
+ margin-right: 0px;
+ border-radius: 20px 0px 0px 20px;
+}
+
+.actions{
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.messageform{
+  display: flex;
   flex-direction: column;
 }
 
 .messageLs{
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 400px;
   min-height: 400px;
   margin: auto;
-  background-color: rgb(236, 229, 236);
-  border-radius: 20px;
+  background-color: #8e9394;
+  border-radius: 0px 20px 20px 0px;
+  border: 1px solid rosybrown;
   margin: 30px auto;
-
+box-shadow: saddlebrown;
 }
 
 .messageDesign{
